@@ -7,6 +7,13 @@
     <title>Memory Game</title>
     <link rel="stylesheet" href="../Style/style.css">
 </head>
+<p id="timer">00:00</p>
+<div class="game-buttons">
+    <button class="pause-btn" id="pausebtn" onclick="pauseGame()">PAUSE</button>
+    <button class="restart-btn" id="restartbtn" onclick="restartGame()">RESTART</button>
+    <button class="select-btn" id="selectbtn" onclick="chooseGame()">DIFFICULTY</button>
+    <button class="quit-btn" id="quitbtn" onclick="quitGame()">QUIT</button>
+</div>
 <section class="memory-game">
     <div class="memory-card" data-framework="icon-1">
         <img class="back-face" src="../Images/backface.jpg" alt="backface" />
@@ -56,7 +63,17 @@
         <img class="back-face" src="../Images/backface.jpg" alt="backface" />
         <img class="front-face" src="../Images/Icon6.png" alt="Icon6" id="icon-6" />
     </div>
+
 </section>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-txt" id="modaltxt"> Modal Text </div>
+    </div>
+</div>
 
 <body>
     <script src="../Source/app.js"></script>

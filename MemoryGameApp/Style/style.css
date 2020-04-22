@@ -8,12 +8,138 @@ body {
     height: 100vh;
     background-color: teal;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+p {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: navy;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: beige;
+    height: 70px;
+    width: 200px;
 }
 
 
+
+/* game page */
+.game-buttons {
+    position: fixed;
+    top: 10%;
+    left: 33.33%;
+}
+
+.pause-btn {
+    left: 20px;
+    border: 0;
+    width: 100px;
+    margin-right: 20px;
+    line-height: 2.5;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #2ecc71;
+    background-image: linear-gradient(to top left,
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.restart-btn {
+    left: 20px;
+    border: 0;
+    margin-right: 20px;
+    line-height: 2.5;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #e67e22;
+    background-image: linear-gradient(to top left,
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.select-btn {
+    left: 20px;
+    border: 0;
+    margin-right: 20px;
+    line-height: 2.5;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #f1c40f;
+    background-image: linear-gradient(to top left,
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.quit-btn {
+    left: 20px;
+    border: 0;
+    margin-right: 20px;
+    line-height: 2.5;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: #c0392b;
+    background-image: linear-gradient(to top left,
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+.pause-btn:hover,
+.restart-btn:hover,
+.select-btn:hover,
+.quit-btn:hover {
+    filter: brightness(125%);
+}
+
+.pause-btn:active,
+.restart-btn:active,
+.select-btn:active,
+.quit-btn:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+        inset 2px 2px 3px rgba(0, 0, 0, .6);
+
+}
+
 .memory-game {
-    width: 640px;
-    height: 640px;
+    width: 500px;
+    height: 500px;
     display: flex;
     margin: auto;
     flex-wrap: wrap;
@@ -53,4 +179,66 @@ body {
     position: absolute;
     backface-visibility: hidden;
 
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-image: linear-gradient(to bottom right, #0f3443, #34e89e);
+    align-items: center;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    /* Could be more or less, depending on screen size */
+    height: 40%;
+}
+
+.modal-txt {
+    color: #182848;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+    margin: 15% auto;
+    top: 0;
+    left: 0;
+}
+
+
+/* The Close Button */
+.close {
+    color: #243b55;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: beige;
+    text-decoration: none;
+    cursor: pointer;
 }

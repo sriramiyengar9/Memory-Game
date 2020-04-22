@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="../Style/intro.css">
+</head>
+
+<body>
+    <header>
+        <h1>MEMORY GAME</h1>
+    </header>
+    <div class="nameinput" id="nameform">
+        <div class="form">
+            <input type="text" class="player-name" id="playername" name="name" autocomplete="off" required />
+            <label for="name" class="label-name">
+                <span class="content-name">Name</span>
+        </div>
+        </label>
+        <br>
+        <button class="submit-btn" id="submitbtn" onclick="submitName(playername)">SUBMIT</button>
+    </div>
+
+    <script src="../Source/app.js"></script>
+</body>
+
+</html>
