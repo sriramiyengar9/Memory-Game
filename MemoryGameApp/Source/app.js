@@ -86,7 +86,7 @@ function submitName() {
     localStorage.setItem('playerName', name); //! browser local storage
     console.log(name);
     if (name !== null && name !== "") {
-        window.location.href = "../View/choose.html";
+        window.location.href = "../MemoryGameApp/View/choose.html";
     }
 }
 
@@ -208,7 +208,7 @@ function chooseGame() {
 
 function quitGame() {
     localStorage.setItem('playerName', '');
-    window.location.href = "../View/intro.html";
+    window.location.href = "../View/index.html";
 }
 //****************!
 
